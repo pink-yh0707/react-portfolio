@@ -1,23 +1,22 @@
-import React from 'react';
+import React, { FC } from 'react';
+import styled from '@emotion/styled';
 
-const App = () => {
+import { Layout } from 'antd';
+import NavigationBar from 'components/common/menubar';
+
+const { Content, Footer } = Layout;
+
+const PageWrapper = styled(Layout)`
+  background-color: transparent;
+`;
+
+const App: FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <PageWrapper>
+      <NavigationBar />
+      <Content>Content</Content>
+      <Footer>Footer</Footer>
+    </PageWrapper>
   );
 };
 
